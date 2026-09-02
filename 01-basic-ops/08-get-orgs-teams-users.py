@@ -1,0 +1,39 @@
+#!/usr/bin/python3
+
+import os
+import pyterprise
+
+tfe_token = os.getenv('TFE_TOKEN')
+tfe_url   = os.getenv('TFE_URL')
+tfe_org   = os.getenv('TFE_ORG')
+
+client    = pyterprise.Client()
+client.init(token=tfe_token, url=tfe_url)
+org = client.set_organization(id=tfe_org)
+orgs = client.list_organizations()
+
+allow_orgs = [ 'FFFFF'
+             ]
+
+allow_teams = [ 'viewers'
+              ]
+
+
+# Loop over the orgs
+for org in orgs:
+    if org.name not in allow_orgs:
+        print ('========================================================================================')
+        print ('Organization: ', org.name)
+        print ('')
+        
+        # Loop over the teams
+        for the_team in org.list_teams():
+            if "viewers" in the_team.name: 
+                print ('-----------------------------------------------')
+                print ('Team: ', the_team.name)
+                print ('')
+
+                # Loop over the users
+                for the_user in the_team.list_users():
+                    print ('User: ', the_user.attributes.username)
+
