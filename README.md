@@ -3,7 +3,7 @@
 A highly modified, expanded, and production-hardened fork of the original `pyterprise` library, optimized to orchestrate mass workspace automation pipelines within large-scale multi-region cloud infrastructures.
 
 ## 🚀 Background & Attribution
-This repository is an extensive refactor built upon the base logic of the open-source [pyterprise package found on PyPI](https: /  / pypi.org / project / pyterprise / ). Due to legacy constraints and deprecations in the original upstream code, this version was completely overhauled to support modern Terraform Cloud / Enterprise REST API endpoints, enterprise-grade authentication, and dynamic workspace synchronization state patterns.
+This repository is an extensive refactor built upon the base logic of the open-source [pyterprise package found on PyPI](https://pypi.org/project/pyterprise/ ). Due to legacy constraints and deprecations in the original upstream code, this version was completely overhauled to support modern Terraform Cloud / Enterprise REST API endpoints, enterprise-grade authentication, and dynamic workspace synchronization state patterns.
 
 ---
 
