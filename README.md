@@ -23,7 +23,7 @@ import pyterprise
 client = pyterprise.Client()
 client.init(
     token="YOUR_SECURE_TFE_TOKEN", 
-    url="https: /  / ://company.com"
+    url="https://my-company.com"
 )
 
 # Target isolated organization scope
